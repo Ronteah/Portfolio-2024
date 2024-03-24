@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
-import { Project } from '../../models/project.model';
+import { Project } from '../../../models/project.model';
 
 @Component({
   selector: 'app-project-card',

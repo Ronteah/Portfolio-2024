@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { Project } from '../../models/project.model';
+import { Project } from '../../../models/project.model';
 
 @Component({
   selector: 'app-components-library',

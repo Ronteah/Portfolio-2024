@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-import { History } from '../../models/history.model';
+import { History } from '../../../models/history.model';
 
 @Component({
   selector: 'app-history',
