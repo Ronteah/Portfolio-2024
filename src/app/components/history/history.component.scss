@@ -1,0 +1,87 @@
+@import '../../../styles.scss';
+
+#container {
+    margin-top: -3.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+section {
+    height: 80vh;
+    font-size: 40px;
+    font-weight: 100;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav {
+    position: fixed;
+    height: 100%;
+    padding: 0 0 5.5rem 2rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+
+    li {
+        position: relative;
+        transition: all 0.3s ease-out;
+        margin-bottom: 2em;
+
+        &:after {
+            content: '';
+            display: block;
+            border-left: 3px solid $primary;
+            height: 250px;
+            width: 20px;
+            position: absolute;
+            left: -26px;
+            top: 15px;
+        }
+
+        span {
+            font-family: $title-font;
+            display: block;
+            padding: 0;
+            color: $white;
+            font-weight: normal;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: transparent;
+                padding-left: .5em;
+                cursor: pointer;
+            }
+
+            &:focus {
+                background-color: transparent;
+            }
+        }
+
+        &.active {
+            font-size: 56px;
+            pointer-events: none;
+            margin-bottom: 2em;
+
+            span {
+                font-size: 64px;
+                color: $primary;
+                padding-left: .25em;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+}
+
+h1 {
+    font-size: 46px;
+    font-family: $title-font;
+}

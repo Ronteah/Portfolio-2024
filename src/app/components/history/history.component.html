@@ -1,5 +1,33 @@
-<div class="flex p-14 justify-between w-screen h-screen">
+<div class="flex p-14 justify-between w-screen h-screen gap-10">
 
     <app-navbar></app-navbar>
+
+    <div id="container"
+        class="flex flex-col w-4/5 h-screen gap-5 relative overflow-auto">
+        <div class="relative">
+            <ul class="nav">
+                <li *ngFor="let histories of shownHistories"
+                    [class]="histories.key"
+                    (click)="scrollToSection(histories.key, $event)">
+                    <span class="text-3xl">{{ histories.key }}</span>
+                </li>
+            </ul>
+
+            <section *ngFor="let histories of shownHistories"
+                [id]="histories.key"
+                class="flex flex-col items-end justify-center gap-16">
+
+                <div *ngFor="let history of histories.value"
+                    class="flex flex-col items-end justify-center border-r-primary border-r-8 pr-6">
+                    <h1 class="font-bold">{{ history.title }}</h1>
+                    <span class="text-2xl font-light mb-8">{{ history.location
+                        }}</span>
+                    <p class="text-xl font-extralight">{{ history.description
+                        }}</p>
+                </div>
+
+            </section>
+        </div>
+    </div>
 
 </div>
