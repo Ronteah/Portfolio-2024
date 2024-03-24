@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { NavLinkComponent } from './components/shared/nav-link/nav-link.component';
+import { NavLinkComponent } from './components/shared/navbar/nav-link/nav-link.component';
 import { LinksComponent } from './components/shared/links/links.component';
 import { ProfileComponent } from './components/shared/profile/profile.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
