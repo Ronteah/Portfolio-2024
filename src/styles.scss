@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+$primary: #FF7900;
+$secondary: #3937A4;
+$dark_bg: #090816;
+$dark_1: #11102D;
+$dark_2: #191761;
+$light_1: #e57600;
+$light_2: #d96500;
+$light_3: #ac4a00;
+$white: #fff;
+$black: #000;
+
+$title-font: 'Syncopate', sans-serif;
+$main-font: 'Outfit', sans-serif;
+
+html,
+body {
+    background-color: $dark_bg;
+    color: $white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+* {
+    font-family: $main-font;
+}
+
+.border-1-primary {
+    border: 1px solid $primary;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $dark_bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

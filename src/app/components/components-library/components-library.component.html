@@ -1,0 +1,26 @@
+<div id="library" class="flex flex-col gap-12 items-center my-24">
+
+    <div class="flex gap-5">
+        <app-nav-link [title]="'Accueil'" [icon]="icon"></app-nav-link>
+        <app-nav-link [title]="'Accueil'" [icon]="icon"
+            [isActive]="true"></app-nav-link>
+    </div>
+
+    <app-navbar></app-navbar>
+
+    <div class="w-2/4 h-screen">
+        <app-links></app-links>
+    </div>
+
+    <app-profile></app-profile>
+
+    <div class="grid gap-5 w-3/4 h-72 grid-cols-2 mb-5">
+        <app-project-card [projet]="projet_avec_lien"></app-project-card>
+        <app-project-card [projet]="projet_sans_lien"></app-project-card>
+    </div>
+
+    <div class="w-full px-32">
+        <app-project-tags></app-project-tags>
+    </div>
+
+</div>

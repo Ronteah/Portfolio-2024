@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+
+h2 {
+    font-family: $title-font;
+}
+
+.interactive {
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

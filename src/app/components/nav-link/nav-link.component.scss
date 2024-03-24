@@ -1,0 +1,30 @@
+@import "../../../styles.scss";
+
+.active {
+    background-color: $primary;
+
+    &:hover {
+        background-color: $light_2;
+    }
+
+    h2,
+    fa-icon {
+        color: $black;
+    }
+}
+
+.inactive {
+    background-color: transparent;
+
+    &:hover {
+        background-color: $dark_2;
+    }
+
+    h2 {
+        color: $white;
+    }
+
+    fa-icon {
+        color: $primary;
+    }
+}

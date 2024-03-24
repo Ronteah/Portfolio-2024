@@ -1,0 +1,14 @@
+@import '../../../styles.scss';
+
+h1 {
+    font-size: 38px;
+    line-height: 38px;
+    font-family: $title-font;
+
+    &>span {
+        font-family: $title-font;
+        font-size: 28px;
+        letter-spacing: 20px;
+        margin-left: 20px;
+    }
+}

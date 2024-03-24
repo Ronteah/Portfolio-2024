@@ -1,0 +1,17 @@
+<div class="flex rounded-3xl w-full h-full">
+    <div
+        class="rounded-l-3xl w-full h-full flex justify-center items-center cursor-pointer overflow-hidden relative link-img"
+        [routerLink]="['/projects']" routerLinkActive="router-link-active">
+        <h1 class="font-bold z-10">Projets</h1>
+        <img src="assets/images/projets.png" alt="Image Projets"
+            class="h-full object-cover pointer-events-none absolute opacity-30 transition">
+    </div>
+
+    <div
+        class="rounded-r-3xl w-full h-full flex justify-center items-center cursor-pointer overflow-hidden relative link-img"
+        [routerLink]="['/history']" routerLinkActive="router-link-active">
+        <h1 class="font-bold z-10">Mon parcours</h1>
+        <img src="assets/images/mon-parcours.jpg" alt="Image Mon parcours"
+            class="h-full object-cover pointer-events-none absolute opacity-30 transition">
+    </div>
+</div>

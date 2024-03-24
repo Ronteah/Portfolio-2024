@@ -1,0 +1,66 @@
+<div class="rounded-3xl w-80 h-full flex flex-col relative">
+    <img src="assets/images/profile.jpg" alt="Photo de Louis Georget"
+        class="w-full rounded-t-3xl" />
+
+    <div class="bg-dark_1 p-6">
+        <p class="text-center text-sm">Étudiant de 22 ans, je fusionne ma
+            créativité artistique et maîtrise technique en développement pour
+            créer des expériences digitales captivantes.</p>
+    </div>
+
+    <div class="flex gap-6 bg-dark_2 p-2 justify-center">
+        <a target="_blank" href="https://instagram.com/ronteahri">
+            <fa-icon [icon]="instagram"
+                class="fa-2x cursor-pointer transition hover:opacity-50"></fa-icon></a>
+        <a target="_blank" href="https://linkedin.com/in/louis-georget">
+            <fa-icon [icon]="linkedin"
+                class="fa-2x cursor-pointer transition hover:opacity-50"></fa-icon></a>
+    </div>
+
+    <div
+        class="bg-secondary flex flex-col items-center justify-center rounded-b-3xl p-12">
+        <div class="flex gap-8">
+            <div class="text-center">
+                <h1 class="stats-title font-bold">30+</h1>
+                <p class="font-light text-sm">Projets menés</p>
+            </div>
+            <div class="text-center">
+                <h1 class="stats-title font-bold">15+</h1>
+                <p class="font-light text-sm">Clients satisfaits</p>
+            </div>
+        </div>
+        <p class="mt-10 mb-6">J'ai travaillé pour eux</p>
+        <div class="grid grid-cols-3 grid-rows-2 gap-x-4 gap-y-4">
+            <div
+                class="bg-white rounded-xl w-full aspect-square flex justify-center items-center">
+                <img src="assets/images/clients/vinci-energies.png"
+                    alt="Logo de VINCI Energies" /></div>
+            <div
+                class="bg-white rounded-xl w-full aspect-square flex justify-center items-center">
+                <img src="assets/images/clients/mma.png"
+                    alt="Logo de MMA" /></div>
+            <div
+                class="bg-white rounded-xl w-full aspect-square flex justify-center items-center">
+                <img src="assets/images/clients/carrefour.png"
+                    alt="Logo de Carrefour" /></div>
+            <div
+                class="bg-white rounded-xl w-full aspect-square flex justify-center items-center">
+                <img src="assets/images/clients/lemans-universite.png"
+                    alt="Logo de l'Université du Mans" /></div>
+            <div
+                class="bg-white rounded-xl w-full aspect-square flex justify-center items-center">
+                <img src="assets/images/clients/kiou.png"
+                    alt="Logo de KIOU" /></div>
+            <div
+                class="bg-white rounded-xl w-full aspect-square flex justify-center items-center">
+                <img src="assets/images/clients/lemans-mobilite.png"
+                    alt="Logo de Le Mans Mobilité" class="p-1" /></div>
+        </div>
+    </div>
+
+    <div
+        [routerLink]="['/contact']" routerLinkActive="router-link-active"
+        class="bg-primary w-full rounded-3xl text-center py-3 mt-8 cursor-pointer transition hover:bg-light_2 absolute bottom-0">
+        <p class="text-black font-semibold">Contacter</p>
+    </div>
+</div>
