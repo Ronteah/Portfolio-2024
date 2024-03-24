@@ -69,8 +69,14 @@ export class ProjectsPageComponent {
 
   setTags(event: string[]): void {
     this.selectedTags = event;
-    this.shownProjects = this.projects.filter((project) => {
-      return event.filter((tag) => project.tags.includes(tag));
-    });
+
+    if (this.selectedTags.length === 0) {
+      this.shownProjects = this.projects;
+      return;
+    } else {
+      this.shownProjects = this.projects.filter((project) =>
+        project.tags.some((tag) => this.selectedTags.includes(tag))
+      );
+    }
   }
 }
