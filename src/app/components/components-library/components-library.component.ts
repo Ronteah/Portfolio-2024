@@ -12,10 +12,12 @@ export class ComponentsLibraryComponent {
   projet_avec_lien: Project = {
     name: 'Test Library',
     tags: ['Angular', 'Tailwindcss', 'Développement'],
+    image: 'assets/images/projets.png',
     link: 'https://youtube.com/',
   };
   projet_sans_lien: Project = {
     name: 'Test Library',
+    image: 'assets/images/projets.png',
     tags: ['Angular', 'Tailwindcss', 'Développement'],
   };
 

@@ -1,7 +1,9 @@
 <div class="flex w-full">
-    <h4 class="font-bold mt-1 w-1/12">Tags :</h4>
+    <h4 class="font-bold mt-1 w-28">Tags :</h4>
 
-    <div id="scroll-container" class="flex gap-4 w-11/12 overflow-hidden">
+    <div id="gradient-right"></div>
+    <div id="gradient-left" class="hidden"></div>
+    <div id="scroll-container" class="flex gap-4 w-full mx-5 overflow-hidden">
         <app-project-tag *ngFor="let tag of selectedTags" [name]="tag"
             [isActive]="true"
             (emitActiveState)="changeTagActiveState(tag, $event)">

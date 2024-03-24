@@ -1,5 +1,5 @@
 <div
-    class="rounded-full border-1-primary cursor-pointer transition whitespace-nowrap"
+    class="rounded-full border-1-primary cursor-pointer whitespace-nowrap"
     [class]="isActive ? 'bg-primary text-black hover:bg-transparent hover:line-through' : 'bg-transparent text-white hover:bg-primary hover:text-black'"
     (click)="toggleActiveState($event)">
     <p class="text-xs px-3 py-1">{{ name }}</p>

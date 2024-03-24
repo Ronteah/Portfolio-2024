@@ -1,19 +1,21 @@
 <div
     class="bg-dark_1 rounded-3xl border-1-primary flex flex-col w-full h-80 relative">
-    <img src="assets/images/projets.png" alt="test"
+    <img [src]="project.image" [alt]="project.name"
         class="w-full h-full object-cover rounded-3xl" />
 
     <div
         class="bg-dark_1 w-full rounded-b-3xl flex flex-col gap-2 px-5 py-4 absolute bottom-0">
         <div class="flex gap-2">
-            <app-project-tag *ngFor="let tag of projet.tags" [name]="tag"
+            <app-project-tag *ngFor="let tag of project.tags" [name]="tag"
+                [isActive]="selectedTags.includes(tag)"
                 (emitActiveState)="changeTagActiveState(tag, $event)">
             </app-project-tag>
         </div>
         <h2 class="text-white text-lg font-bold mt-1"
-            (click)="!!projet.link && openLink(projet.link)"
-            [ngClass]="{interactive: !!projet.link}">{{ projet.name }} <fa-icon
-                *ngIf="!!projet.link" class="ml-1 fa-xs"
+            (click)="!!project.link && openLink(project.link)"
+            [ngClass]="{interactive: !!project.link}">{{ project.name }}
+            <fa-icon
+                *ngIf="!!project.link" class="ml-1 fa-xs"
                 [icon]="icon"></fa-icon></h2>
     </div>
 </div>

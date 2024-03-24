@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import { Project } from '../../models/project.model';
 
@@ -9,7 +9,13 @@ import { Project } from '../../models/project.model';
 })
 export class ProjectCardComponent {
   @Input()
-  projet!: Project;
+  project!: Project;
+
+  @Input()
+  selectedTags: string[] = [];
+
+  @Output()
+  emitSelectedTags: EventEmitter<string[]> = new EventEmitter<string[]>();
 
   icon = faExternalLink;
 
@@ -19,5 +25,14 @@ export class ProjectCardComponent {
     window.open(link, '_blank');
   }
 
-  changeTagActiveState(tag: string, event: boolean): void {}
+  changeTagActiveState(tag: string, event: boolean): void {
+    if (event) {
+      this.selectedTags.push(tag);
+    } else {
+      this.selectedTags = this.selectedTags.filter(
+        (selectedTag) => selectedTag !== tag
+      );
+    }
+    this.emitSelectedTags.emit(this.selectedTags);
+  }
 }

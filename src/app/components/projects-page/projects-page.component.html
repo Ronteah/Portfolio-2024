@@ -2,12 +2,18 @@
 
     <app-navbar></app-navbar>
 
-    <div class="flex flex-col w-4/5 gap-5">
-        <app-project-tags></app-project-tags>
+    <div class="flex flex-col w-4/5 gap-5 relative">
+        <app-project-tags
+            [selectedTags]="selectedTags"
+            (emitSelectedTags)="setTags($event)"></app-project-tags>
 
-        <div class="grid w-full grid-cols-3 gap-5 pr-5 overflow-y-auto">
-            <app-project-card *ngFor="let project of projects"
-                [projet]="project"></app-project-card>
+        <div id="gradient-top"></div>
+        <div id="grid"
+            class="grid w-full grid-cols-3 gap-5 pr-5 overflow-y-auto">
+            <app-project-card *ngFor="let project of shownProjects"
+                [selectedTags]="selectedTags"
+                [project]="project"
+                (emitSelectedTags)="setTags($event)"></app-project-card>
         </div>
     </div>
 

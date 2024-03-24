@@ -3,3 +3,25 @@
 h4 {
     font-family: $title-font;
 }
+
+#gradient-right {
+    background: linear-gradient(90deg, transparent, $dark_bg);
+    width: 100px;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    right: 1.25rem;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#gradient-left {
+    background: linear-gradient(-90deg, transparent, $dark_bg);
+    width: 100px;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    left: 7.6rem;
+    z-index: 2;
+    pointer-events: none;
+}

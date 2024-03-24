@@ -44,9 +44,28 @@ export class ProjectTagsComponent {
 
   ngOnInit(): void {
     const container = document.querySelector('#scroll-container');
+    const gradientLeft = document.querySelector('#gradient-left');
+    const gradientRight = document.querySelector('#gradient-right');
+
     container?.addEventListener('wheel', (event: any) => {
       event.preventDefault();
       container.scrollLeft += event.deltaY;
+
+      const isAtMaxScroll =
+        container.scrollLeft === container.scrollWidth - container.clientWidth;
+      const isAtMinScroll = container.scrollLeft === 0;
+
+      if (isAtMaxScroll) {
+        gradientRight?.classList.add('hidden');
+      } else {
+        gradientRight?.classList.remove('hidden');
+      }
+
+      if (isAtMinScroll) {
+        gradientLeft?.classList.add('hidden');
+      } else {
+        gradientLeft?.classList.remove('hidden');
+      }
     });
 
     this.sortTags();
@@ -63,6 +82,7 @@ export class ProjectTagsComponent {
       this.tags.push(tag);
     }
 
+    this.emitTags();
     this.sortTags();
   }
 

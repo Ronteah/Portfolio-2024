@@ -1,0 +1,20 @@
+@import "../../../styles.scss";
+
+#gradient-top {
+    background: linear-gradient(0deg, transparent, $dark_bg);
+    width: 100%;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#grid {
+    margin-bottom: -3.5rem;
+
+    &:last-child {
+        padding-bottom: 3.5rem;
+    }
+}
